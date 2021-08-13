@@ -1,4 +1,4 @@
-import homeCss from '../styles/home.module.css'
+import homeCss from '../styles/Home.module.css'
 
 export default function Home(){
   return(
