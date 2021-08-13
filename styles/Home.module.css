@@ -1,3 +1,8 @@
 .home_container{
-    height:65vh;
+    height:75vh;
+}
+
+.home_title{
+    font-size: 32px;
+    text-align: center;
 }

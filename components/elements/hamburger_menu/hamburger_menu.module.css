@@ -1,0 +1,11 @@
+.hamburger_menu_container{
+    display: block;
+}
+
+.stripe{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom:4px;
+    border-radius: 2px;
+}
