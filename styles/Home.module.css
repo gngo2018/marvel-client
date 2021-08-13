@@ -1,8 +1,88 @@
-.home_container{
-    height:75vh;
+.home_background_image{
+    background: url(../public/assets/marvel_bg_1.jpg);
+    height: 200px;
+    background-size: cover;
 }
 
 .home_title{
+    padding-top:15px;
     font-size: 32px;
     text-align: center;
+}
+
+.about_app_blob{
+    background-color: white;
+    border-radius: 5px;
+    height: 150px;
+    padding: 5%;
+    margin-top:15px;
+}
+
+.about_app_blob div{
+    font-size: 18px;
+}
+
+.featured_container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.featured_header{
+    margin: 15px 0px;
+    font-size: 24px;
+}
+
+.featured_card{
+    text-align: center;
+    background-color: white;
+    height: 150px;
+    width: 337px;
+    border-radius:5px;
+}
+
+@media (min-width: 720px) {
+    .home_background_image{
+        height: 350px;
+    }
+
+    .about_app_blob{
+        margin:0% 10%; 
+    }
+
+    .featured_container{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5%;
+        padding: 0% 10%;
+    }
+}
+
+@media (min-width:1000px) {
+    .home_background_image{
+        height: 500px;
+    }
+}
+
+@media (min-width:1100px) {
+    .home_title{
+        text-align: start;
+        margin-left:10%;
+        margin-bottom: 1%;
+    }
+
+    .home_background_image{
+        height: 600px;
+        background-position: center;
+    }
+    
+    .featured_header{
+        text-align: center;
+    }
+
+    .featured_card{
+        height: 250px;
+        width: 250px;
+    }
 }
