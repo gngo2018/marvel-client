@@ -5,10 +5,10 @@ import utilsCss from '../styles/utils.module.css'
 export default function Home() {
   const data = MarvelService.IronManData();
 
-  function retrieveMarvelUrl() {
-    const res = MarvelService.GetMarvelHeroByName("test");
+  async function retrieveMarvelUrl() {
+    const res = await MarvelService.GetMarvelHeroByName("test");
 
-    console.log(res);
+    console.log(res.data);
   }
 
   return (

@@ -67,11 +67,12 @@ export function IronManData() {
     return data;
 }
 
-export function GetMarvelHeroByName(props: string){
+export async function GetMarvelHeroByName(props: string){
     try{
-        var response = axios.get(requestUrl);
-        
-        return response;
+        const response = await axios.get(requestUrl);
+
+
+        return response.data;
     }
     catch(e){
         return(e);
