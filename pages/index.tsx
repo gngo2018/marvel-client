@@ -5,6 +5,12 @@ import utilsCss from '../styles/utils.module.css'
 export default function Home() {
   const data = MarvelService.IronManData();
 
+  function retrieveMarvelUrl() {
+    const res = MarvelService.GetMarvelHeroByName("test");
+
+    console.log(res);
+  }
+
   return (
     <>
       <div className={homeCss.home_background_image}></div>
@@ -38,6 +44,7 @@ export default function Home() {
             <div className={homeCss.featured_card}>Event 1</div>
           </div>
         </div>
+        <button onClick={() => retrieveMarvelUrl()}>Gumdrop</button>
       </div>
     </>
   );
