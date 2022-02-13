@@ -1,3 +1,10 @@
+import axios from 'axios'
+
+const url = process.env.NEXT_PUBLIC_marvel_url + 'public/characters?apikey='
+const key = process.env.NEXT_PUBLIC_marvel_public_key
+
+const requestUrl = url + key
+
 export function IronManData() {
     var data = {
         "code": 200,
@@ -58,4 +65,16 @@ export function IronManData() {
     }
 
     return data;
+}
+
+export async function GetMarvelHeroByName(props: string){
+    try{
+        const response = await axios.get(requestUrl);
+
+
+        return response.data;
+    }
+    catch(e){
+        return(e);
+    }
 }
