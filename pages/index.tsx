@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import * as MarvelService from '../services/MarvelService'
 import homeCss from '../styles/Home.module.css'
 import utilsCss from '../styles/utils.module.css'
@@ -19,7 +20,11 @@ export default function Home() {
             <div className={homeCss.featured_header}>Featured Hero:</div>
             <i>{data.data.results[0].name}</i>
             <div className={homeCss.featured_card}>
-              <img src={`${data.data.results[0].thumbnail.path}.${data.data.results[0].thumbnail.extension}`} />
+              <Image 
+                src={`${data.data.results[0].thumbnail.path}.${data.data.results[0].thumbnail.extension}`} 
+                alt='character_image'
+                layout='fill'
+              />
             </div>
           </div>
           <div className={homeCss.featured_item}>

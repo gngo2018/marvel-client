@@ -47,6 +47,7 @@
     background-color: white;
     height: 300px;
     width: 300px;
+    position: relative;
 }
 
 .featured_card img{
